@@ -4,6 +4,9 @@ this script is for String to hex,
   
   ./str2hex.py "word for encode"
   
+this is for my playing so maybe will occure some error,
+because I didn't test in other environment
+  
   
 # Example
   
