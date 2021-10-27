@@ -1,6 +1,6 @@
 # str2hex
 
-this script is for String to hex,
+this script is for String to hex encode,
   
   ./str2hex.py "word for encode"
   
