@@ -2,9 +2,7 @@
 
 this script is for String to hex,
   
-  ./str2hex.py <word for encode>
-  
-  ./str2hex.py "/ls"
+  ./str2hex.py "word for encode"
   
   
 # Example
