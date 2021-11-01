@@ -34,18 +34,17 @@ def step1():
     print(f"[*]Inputed : {text}")
     print(f"[-]HexEncoded: {hex_decoded}")
 
-    fixed_array = input_array.sort()
+    input_array.sort()
     
-    return fixed_array
+    return input_array
    
     del input_array
-    del fixed_array
-
-def step2(fixed_array):
+    
+def step2(input_array):
     
     form1 = "0x"
     form2 = "\\x"
-    outter = "".join(p for p in fixed_array)
+    outter = "".join(p for p in input_array)
      
     def finalize(form,outter):
         
@@ -107,8 +106,8 @@ def main():
     
     else:
 
-        fixed_array = step1()
-        step2(fixed_array)
+        input_array = step1()
+        step2(input_array)
 
 if __name__ == "__main__":
     
