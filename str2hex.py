@@ -34,7 +34,7 @@ def step1():
     print(f"[*]Inputed : {text}")
     print(f"[-]HexEncoded: {hex_decoded}")
 
-    input_array.sort()
+    input_array.reverse()
     
     return input_array
    
