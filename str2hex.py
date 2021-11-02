@@ -39,7 +39,7 @@ def step1():
     return input_array
    
     del input_array
-    
+
 def step2(input_array):
     
     form1 = "0x"
@@ -106,12 +106,10 @@ def main():
     
     else:
 
-        input_array = step1()
-        step2(input_array)
+        fixed_array = step1()
+        step2(fixed_array)
 
 if __name__ == "__main__":
     
     init()
     main()
-    
-    
